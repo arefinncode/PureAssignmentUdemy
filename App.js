@@ -10,6 +10,7 @@ import {
     List
 } from 'react-native';
 import ListItem from './src/components/ListItem/ListItem';
+import PlaceInput from './src/components/PlaceInput/PlaceInput';
 // import {YellowBox} from 'react-native';
 // YellowBox.ignoreWarnings(['Warning: ...']);
 // import {Image } from 'react-native';
@@ -90,12 +91,27 @@ export default class App extends Component {
         ));
         return(
             <View style ={styles.container}>
+                /*
                 <View style={styles.inputContainer}>
-                    <TextInput placeholder={"An awesome place"} value={this.state.placeName}
-                        onChangeText={this.placeNameChangedHandler} style={styles.placeInput}/>
-                    <Button title="Add" style={styles.placeButton} onPress={this.placeSubmitHandler}/>
+                    <TextInput
+                        placeholder={"An awesome place"}
+                        value={this.state.placeName}
+                        onChangeText={this.placeNameChangedHandler}
+                        style={styles.placeInput}
+                    />
+                    <Button
+                        title="Add"
+                        style={styles.placeButton}
+                        onPress={this.placeSubmitHandler}
+                    />
+                </View>*/
+
+                <PlaceInput val={this.state.placeName} />
+
+                <View
+                    style={styles.listContainer}>
+                    {placesOutput}
                 </View>
-                <View style={styles.listContainer}>{placesOutput}</View>
             </View>
         );
     }
@@ -123,12 +139,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF',
         alignItems: 'center',
         justifyContent: 'flex-start'
-    },
-    inputContainer:{
-        width:"100%",
-        flexDirection:"row",
-        justifyContent:"space-between",
-        alignItems:"center"
     },
     placeInput:{
         width:"70%"
