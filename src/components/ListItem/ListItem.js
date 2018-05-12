@@ -1,6 +1,6 @@
 import React from 'react';
 import {View,Text,StyleSheet} from 'react-native';
-const listItem=(props)=>(
+const ListItem=(props)=>(
     <View style={styles.listItem}>
         <Text>{props.placeName}</Text>
     </View>
@@ -17,5 +17,5 @@ const styles=StyleSheet.create({
     }
 });
 
-export default listItem;
+export default ListItem;
 // AppRegistry.registerComponent('AwesomeProject', () => ListItem);
