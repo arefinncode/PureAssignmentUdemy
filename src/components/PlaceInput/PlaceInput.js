@@ -1,5 +1,5 @@
-import React ,{ Component} from 'react';
-import {View,Text,StyleSheet,TextInput,Button,} from 'react-native';
+// import React ,{ Component} from 'react';
+// import {View,Text,StyleSheet,TextInput,Button,} from 'react-native';
 // import App from "../../../App";
 
 
@@ -23,7 +23,7 @@ import {View,Text,StyleSheet,TextInput,Button,} from 'react-native';
 
 
 
-
+/*
 class PlaceInput extends Component {
     state = {
         placeName: ""
@@ -46,11 +46,11 @@ class PlaceInput extends Component {
 
 
         this.props.onPlaceAdded(this.state.placeName);
-    };
+    };*/
 
-    render() {
+   // render() {
         // const textColor = this.props.selected ? "red" : "black";
-        return (
+       // return (
 
             /*<TouchableOpacity onPress={this._onPress}>
                 <View>
@@ -59,6 +59,7 @@ class PlaceInput extends Component {
                     </Text>
                 </View>
             </TouchableOpacity>*/
+/*
 
             <View style={styles.inputContainer}>
                 <TextInput
@@ -77,6 +78,7 @@ class PlaceInput extends Component {
     }
 }
 
+*/
 
 
 
@@ -166,19 +168,19 @@ export default class PlaceInput extends App {
 // );
 
 
+//
+// const styles=StyleSheet.create({
+//     inputContainer:{
+//         width:"100%",
+//         flexDirection:"row",
+//         justifyContent:"space-between",
+//         alignItems:"center"
+//
+//     },
+//     placeButton:{
+//         width:"30%"
+//     }
+// });
 
-const styles=StyleSheet.create({
-    inputContainer:{
-        width:"100%",
-        flexDirection:"row",
-        justifyContent:"space-between",
-        alignItems:"center"
-
-    },
-    placeButton:{
-        width:"30%"
-    }
-});
-
-export default PlaceInput;
+// export default PlaceInput;
 // AppRegistry.registerComponent('AwesomeProject', () => ListItem);
