@@ -4,6 +4,7 @@ import{
     Text,
     StyleSheet} from 'react-native';
 const ListItem=(props)=>(
+
     <View style={styles.listItem}>
         <Text>{props.placeName}</Text>
     </View>

@@ -32,9 +32,21 @@ export default class App extends Component {
     // constructor(props) {
     //     super(props);
     //     this.state = {
+
+    // both of them works
+    /*
         state = {
             places: []
         };
+        */
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            //     state = {
+            places: []
+        };
+    }
 
         placeAddedHandler = placeName => {
           console.log(placeName);
