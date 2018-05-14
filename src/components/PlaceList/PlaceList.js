@@ -1,22 +1,42 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet,FlatList } from 'react-native';
 
 import ListItem from '../ListItem/ListItem';
 
 const PlaceList=props=>{
 
-     console.log(props.places);
-    const placesOutput=props.places.map((currentValue,index)=>(
-        /*<ListItem Key={index} placeName={currentValue}/>*/
+    /*
+    old code
+
+         console.log(props.places);
+        const placesOutput=props.places.map((currentValue,index)=>(
+            /*<ListItem Key={index} placeName={currentValue}/>
 
         <ListItem Key={index} placeName={currentValue}/>
-        )
+    )
     );
 
-     console.log(placesOutput);
+        console.log(placesOutput);
 
-    return(
-        <View style={styles.listContainer}>{placesOutput}</View>
+        return(
+
+            <View style={styles.listContainer}>{placesOutput}</View>
+        );
+     */
+
+    return (
+        <FlatList
+            style={styles.listContainer}
+            data={props.places}
+            renderItem={(info)=>(
+                <ListItem
+                    placeName={info.item.name}
+                    placeImage={info.item.image}
+                    onItemPressed={()=> props.onItemSelected(info.item.key)}
+                />
+
+            )}
+        />
     );
 };
 

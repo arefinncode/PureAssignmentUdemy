@@ -62,6 +62,10 @@ class PlaceInput extends Component {
     state = {
         placeName: ""
     };
+    
+    componentDidMount() {
+    
+    }
 
     placeNameChangedHandler = val => {
         this.setState({
